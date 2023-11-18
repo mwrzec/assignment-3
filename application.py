@@ -61,6 +61,22 @@ class Application:
                 break
             else:
                 print("Invalid Selection. Try again.")
+    def open_acc_menu(self):
+        acc_type = input("Enter the type of account you would like to open (Savings/Chequing): ").lower()
+        start_balance = float(input("Enter start balance: "))
+
+        if acc_type == "Savings":
+            account = SavingsAcc(str(random.randint(10000000,99999999)), start_balance,0)
+        elif acc_type == "Chequing":
+            account = ChequingAcc(str(random.randint(10000000,99999999)), start_balance, 0)
+        else:
+            print("Invalid account type. Enter 'Chequing' or 'Savings'.")
+            return
+        self.bank.add_acc(account)
+        print(f"Account has been opened successfuly! Account number: {account.acc_num}")
+
+bank = Bank()
+bank.create_def_acc()
 
 
 
