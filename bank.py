@@ -1,4 +1,6 @@
 import random
+from savings_account import SavingsAcc
+from chequing_account import ChequingAcc
 
 class Bank:
     def __init__(self):
