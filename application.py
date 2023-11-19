@@ -1,4 +1,7 @@
 import random
+from bank import Bank
+from savings_account import SavingsAcc
+from chequing_account import ChequingAcc
 
 class Application:
     def __init__(self,bank):
