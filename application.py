@@ -83,7 +83,7 @@ bank.create_def_acc()
 
 app = Application(bank)
 
-app.show_acc_menu()
+app.show_menu()
 
 
 
