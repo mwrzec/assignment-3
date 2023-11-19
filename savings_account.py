@@ -5,11 +5,18 @@ class SavingsAcc(Account):
         super().__init__(acc_num, balance)
         self.min_bal = min_bal
 
-    def withdrawl(self,amount):
+    def withdraw(self, amount):
         if amount > 0 and self.balance - amount >= self.min_bal:
             self.balance -= amount
             return True
-        
         else:
-            print("Withdrawl not allowed. Exceeds minimum balance.")
+            print("Withdrawal not allowed. Exceeds minimum balance.")
+            return False
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            return True
+        else:
+            print("Invalid deposit amount.")
             return False

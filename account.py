@@ -3,10 +3,10 @@ class Account:
         self.acc_num = acc_num
         self.balance = balance
 
-    def get_bal(self):
+    def get_balance(self):
         return self.balance
     
-    def deposit(self,amount):
+    def depo(self,amount):
         if amount > 0:
             self.balance += amount
             return True

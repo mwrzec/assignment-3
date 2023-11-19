@@ -5,10 +5,10 @@ class ChequingAcc(Account):
         super().__init__(acc_num, balance)
         self.over_limit = over_limit
 
-    def withdrawl(self, amount):
+    def withdraw(self, amount):
         if amount > 0 and amount <= self.balance + self.over_limit:
             self.balance -= amount
             return True
         else:
-            print("Withdrawlnot allowed. Exceeds overdraft limit.")
+            print("Withdrawal not allowed. Exceeds overdraft limit.")
             return False
