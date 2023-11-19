@@ -3,10 +3,11 @@ from bank import Bank
 from savings_account import SavingsAcc
 from chequing_account import ChequingAcc
 
+#class created to define application.
 class Application:
     def __init__(self, bank):
         self.bank = bank
-
+#def show_menu is made to display main menu for users allowing them to open accounts or select acounts and leave the application.
     def show_menu(self):
         while True:
             print("1. Select Account")
@@ -31,7 +32,7 @@ class Application:
                 break
             else:
                 print("Invalid Selection. Try again.")
-
+#Def show_acc_menu is also to show a menu for the user however this one is specific to the user account details.
     def show_acc_menu(self, account):
         while True:
             print("\nAccount Menu:")
@@ -59,7 +60,7 @@ class Application:
                 break
             else:
                 print("Invalid Selection. Try again.")
-
+#def open_acc_menu is made to allow the user to create an account and is given a acc number after theyve specified account type and start balance.
     def open_acc_menu(self):
         acc_type = input("Enter account type (savings/chequing): ").lower()
         start_balance = float(input("Enter initial balance: "))
