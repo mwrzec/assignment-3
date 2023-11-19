@@ -6,7 +6,7 @@ class Bank:
     def __init__(self):
         self.accounts = []
     def add_acc(self, account):
-        self.account.append(account)
+        self.accounts.append(account)
 
     def search_acc(self, acc_num):
         for account in self.accounts:
