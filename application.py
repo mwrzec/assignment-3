@@ -81,6 +81,10 @@ class Application:
 bank = Bank()
 bank.create_def_acc()
 
+app = Application(bank)
+
+app.show_acc_menu()
+
 
 
 
