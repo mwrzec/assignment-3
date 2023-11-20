@@ -77,7 +77,7 @@ class Application:
 
         self.bank.add_acc(account)
         print(
-            f"Account opened successfully. Account Number: {account.acc1_num}")
+            f"Account opened successfully. Account Number: {account.acc_num}")
 
 
 bank = Bank()
